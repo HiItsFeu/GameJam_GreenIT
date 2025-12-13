@@ -5,9 +5,10 @@ public class PlayerController : MonoBehaviour
 {
     public float speed = 5f;
     public float jumpForce = 10f;
-    public bool isGrounded = true;
     public float fallMultiplier = 2f;  // pour slow fall
     public float lowJumpMultiplier = 2f; // pour jump court si on rel�che Space
+    private int isGrounded = 0;
+    private bool firstCollide = true;
 
     private Rigidbody2D rb;
 
@@ -23,7 +24,7 @@ public class PlayerController : MonoBehaviour
         rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
 
         // Jump
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetButtonDown("Jump") && isGrounded == 0)
         {
             Jump();
         }
@@ -43,18 +44,22 @@ public class PlayerController : MonoBehaviour
     {
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-        isGrounded = false;
+        isGrounded = 0;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
-            isGrounded = true;
+        {
+            if (!firstCollide)
+                isGrounded--;
+            firstCollide = false;
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
-            isGrounded = false;
+            isGrounded++;
     }
 }
