@@ -63,7 +63,9 @@ public class PlayerController : MonoBehaviour
 
         if (rb.linearVelocity.y < 0)
         {
-            rb.linearVelocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+            float mult = fallMultiplier;
+            if (Input.GetButton("Jump")) mult = 0.25f;
+            rb.linearVelocity += Vector2.up * Physics2D.gravity.y * (mult - 1) * Time.deltaTime;
         }
         else if (rb.linearVelocity.y > 0 && !Input.GetButton("Jump"))
         {
