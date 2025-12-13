@@ -1,0 +1,468 @@
+fileFormatVersion: 2
+guid: 97029176d254e144893c72d49897c4b9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8297587292298856911
+    second: coccinelle_chara_sheet_0
+  - first:
+      213: 4098240144961470995
+    second: coccinelle_chara_sheet_1
+  - first:
+      213: 7768525663008646519
+    second: coccinelle_chara_sheet_2
+  - first:
+      213: -8394324601455348128
+    second: coccinelle_chara_sheet_3
+  - first:
+      213: -3972930049213607070
+    second: coccinelle_chara_sheet_4
+  - first:
+      213: -6709814786051211113
+    second: coccinelle_chara_sheet_5
+  - first:
+      213: -5322677707464912866
+    second: coccinelle_chara_sheet_6
+  - first:
+      213: -2335573141999835025
+    second: coccinelle_chara_sheet_7
+  - first:
+      213: 5423545416279300684
+    second: coccinelle_chara_sheet_8
+  - first:
+      213: -317996861666315155
+    second: coccinelle_chara_sheet_9
+  - first:
+      213: -6313477149266078707
+    second: coccinelle_chara_sheet_10
+  - first:
+      213: 43838322777156209
+    second: coccinelle_chara_sheet_11
+  - first:
+      213: -3471202170075826358
+    second: coccinelle_chara_sheet_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: coccinelle_chara_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 814
+        width: 299
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc9c44a0ea3f62370800000000000000
+      internalID: 8297587292298856911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coccinelle_chara_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 834
+        width: 299
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3128cacc2bfdfd830800000000000000
+      internalID: 4098240144961470995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coccinelle_chara_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 659
+        width: 304
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 775e22c5ee85fcb60800000000000000
+      internalID: 7768525663008646519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coccinelle_chara_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 834
+        width: 299
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0667ee0004e518b80800000000000000
+      internalID: -8394324601455348128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coccinelle_chara_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1548
+        y: 814
+        width: 299
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 263d5237b215dd8c0800000000000000
+      internalID: -3972930049213607070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coccinelle_chara_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 533
+        width: 351
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79001c09003f1e2a0800000000000000
+      internalID: -6709814786051211113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coccinelle_chara_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 514
+        width: 305
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e10d9a863dc0226b0800000000000000
+      internalID: -5322677707464912866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coccinelle_chara_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 514
+        width: 305
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f68282c0a90669fd0800000000000000
+      internalID: -2335573141999835025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coccinelle_chara_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1521
+        y: 533
+        width: 351
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4a968822dd444b40800000000000000
+      internalID: 5423545416279300684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coccinelle_chara_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 72
+        width: 418
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d64b0b40a8f369bf0800000000000000
+      internalID: -317996861666315155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coccinelle_chara_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 65
+        width: 393
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d041374abf50268a0800000000000000
+      internalID: -6313477149266078707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coccinelle_chara_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 65
+        width: 393
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17a6ea8e8bebb9000800000000000000
+      internalID: 43838322777156209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coccinelle_chara_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1469
+        y: 72
+        width: 418
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a47b01d7400d3dfc0800000000000000
+      internalID: -3471202170075826358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      coccinelle_chara_sheet_0: 8297587292298856911
+      coccinelle_chara_sheet_1: 4098240144961470995
+      coccinelle_chara_sheet_10: -6313477149266078707
+      coccinelle_chara_sheet_11: 43838322777156209
+      coccinelle_chara_sheet_12: -3471202170075826358
+      coccinelle_chara_sheet_2: 7768525663008646519
+      coccinelle_chara_sheet_3: -8394324601455348128
+      coccinelle_chara_sheet_4: -3972930049213607070
+      coccinelle_chara_sheet_5: -6709814786051211113
+      coccinelle_chara_sheet_6: -5322677707464912866
+      coccinelle_chara_sheet_7: -2335573141999835025
+      coccinelle_chara_sheet_8: 5423545416279300684
+      coccinelle_chara_sheet_9: -317996861666315155
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
