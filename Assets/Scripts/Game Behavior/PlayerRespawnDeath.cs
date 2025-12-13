@@ -32,14 +32,10 @@ public class PlayerRespawnDeath : MonoBehaviour
     {
         animator.SetBool("is_alive", false);
         playerRb.simulated = false;
-<<<<<<< Updated upstream
-        spriteRenderer.enabled = false;
-=======
         //spriteRenderer.enabled = false;
 
         Vector2 screenPos = Camera.main.WorldToScreenPoint(respawnPoint);
         infoText.rectTransform.position = screenPos + new Vector2(40, 40);
->>>>>>> Stashed changes
         infoText.enabled = true;
 
         for (int i = 0; i < duration; i++) {

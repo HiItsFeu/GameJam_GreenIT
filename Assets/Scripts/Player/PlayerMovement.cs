@@ -25,8 +25,6 @@ public class PlayerController : MonoBehaviour
         float horizontal = Input.GetAxisRaw("Horizontal"); // -1,0,1 plus propre que KeyCheck
         rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
 
-<<<<<<< Updated upstream
-=======
         // Animation set
         if (horizontal < 0)
         {
@@ -57,7 +55,6 @@ public class PlayerController : MonoBehaviour
         }
 
         // Jump
->>>>>>> Stashed changes
         if (Input.GetButtonDown("Jump") && isGrounded == 0)
         {
             animator.SetBool("is_flying", true);
