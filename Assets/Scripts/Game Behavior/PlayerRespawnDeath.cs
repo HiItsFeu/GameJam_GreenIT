@@ -8,6 +8,7 @@ public class PlayerRespawnDeath : MonoBehaviour
     public Vector3 respawnPoint;
     public ParticleSystem deathPS;
     public TMP_Text infoText;
+    public Animator animator;
     Rigidbody2D playerRb;
     SpriteRenderer spriteRenderer;
     private void Update()
@@ -29,8 +30,16 @@ public class PlayerRespawnDeath : MonoBehaviour
 
     IEnumerator Respawn(int duration)
     {
+        animator.SetBool("is_alive", false);
         playerRb.simulated = false;
+<<<<<<< Updated upstream
         spriteRenderer.enabled = false;
+=======
+        //spriteRenderer.enabled = false;
+
+        Vector2 screenPos = Camera.main.WorldToScreenPoint(respawnPoint);
+        infoText.rectTransform.position = screenPos + new Vector2(40, 40);
+>>>>>>> Stashed changes
         infoText.enabled = true;
 
         for (int i = 0; i < duration; i++) {
@@ -38,10 +47,11 @@ public class PlayerRespawnDeath : MonoBehaviour
             yield return new WaitForSeconds(1);
         }
         
+        animator.SetBool("is_alive", true);
         transform.position = respawnPoint;
         infoText.enabled = false;
         playerRb.simulated = true;
-        spriteRenderer.enabled = true;
+        //spriteRenderer.enabled = true;
     }
 
     public void Kill()
