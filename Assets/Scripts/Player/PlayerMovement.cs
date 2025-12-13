@@ -19,17 +19,14 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        // D�placement horizontal
         float horizontal = Input.GetAxisRaw("Horizontal"); // -1,0,1 plus propre que KeyCheck
         rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
 
-        // Jump
         if (Input.GetButtonDown("Jump") && isGrounded == 0)
         {
             Jump();
         }
 
-        // Better jump (slow fall & jump cut)
         if (rb.linearVelocity.y < 0)
         {
             rb.linearVelocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
