@@ -10,6 +10,11 @@ public class PlayerRespawnDeath : MonoBehaviour
     public TMP_Text infoText;
     Rigidbody2D playerRb;
     SpriteRenderer spriteRenderer;
+    private void Update()
+    {
+        Vector2 screenPos = Camera.main.WorldToScreenPoint(respawnPoint);
+        infoText.rectTransform.position = screenPos + new Vector2(40, 40);
+    }
 
     private void Awake()
     {
@@ -26,9 +31,6 @@ public class PlayerRespawnDeath : MonoBehaviour
     {
         playerRb.simulated = false;
         spriteRenderer.enabled = false;
-
-        Vector2 screenPos = Camera.main.WorldToScreenPoint(respawnPoint);
-        infoText.rectTransform.position = screenPos + new Vector2(40, 40);
         infoText.enabled = true;
 
         for (int i = 0; i < duration; i++) {
