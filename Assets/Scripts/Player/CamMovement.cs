@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Camera))]
@@ -14,6 +15,7 @@ public class CameraFollow : MonoBehaviour
 
     private float zOffset;
     private Camera cam;
+    private Coroutine zoomCoroutine;
 
     void Awake()
     {
@@ -30,25 +32,49 @@ public class CameraFollow : MonoBehaviour
         if (!target)
             return;
 
-        // Taille visible de la caméra
         float camHeight = cam.orthographicSize;
         float camWidth = camHeight * cam.aspect;
 
-        // Clamp en prenant en compte la taille de la caméra
         float clampedX = Mathf.Clamp(target.position.x, minBounds.x + camWidth, maxBounds.x - camWidth);
         float clampedY = Mathf.Clamp(target.position.y, minBounds.y + camHeight, maxBounds.y - camHeight);
-        minBounds.x = -8;
-        minBounds.y = -5;
-        maxBounds.x = 13;
-        maxBounds.y = 6;
 
         Vector3 desiredPosition = new Vector3(clampedX, clampedY, zOffset);
-
         transform.position = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed * Time.deltaTime);
+
+        // test for zoom cam
+        //if (Input.GetKeyDown(KeyCode.C))
+        //{
+        //    TweenZoom(1.5f, 0.5f);
+        //}
     }
 
-    public void SetZoom(float zoomValue)
+    public void TweenZoom(float zoomValue, float duration)
     {
-        cam.orthographicSize = Zoom / zoomValue;
+        float targetZoom = Zoom / Mathf.Max(0.01f, zoomValue);
+
+        if (zoomCoroutine != null)
+            StopCoroutine(zoomCoroutine);
+
+        zoomCoroutine = StartCoroutine(ZoomRoutine(targetZoom, duration));
+    }
+
+    IEnumerator ZoomRoutine(float targetZoom, float duration)
+    {
+        float startZoom = cam.orthographicSize;
+        float time = 0f;
+
+        while (time < duration)
+        {
+            time += Time.deltaTime;
+            float t = time / duration;
+
+            // équivalent Easing Roblox (QuadOut)
+            t = 1f - Mathf.Pow(1f - t, 2f);
+
+            cam.orthographicSize = Mathf.Lerp(startZoom, targetZoom, t);
+            yield return null;
+        }
+
+        cam.orthographicSize = targetZoom;
     }
 }
