@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
         // Animation set
         if (horizontal < 0)
         {
-            transform.rotation = Quaternion.Euler(0, 0, -7f);
+            if (animator.GetBool("is_alive")) transform.rotation = Quaternion.Euler(0, 0, -7f);
             standing = 0;
             animator.SetBool("is_walking", true);
             animator.SetBool("is_standing", false);
@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (horizontal > 0)
         {
-            transform.rotation = Quaternion.Euler(0, 0, 7f);
+            if (animator.GetBool("is_alive")) transform.rotation = Quaternion.Euler(0, 0, 7f);
             standing = 0;
             animator.SetBool("is_walking", true);
             animator.SetBool("is_standing", false);
