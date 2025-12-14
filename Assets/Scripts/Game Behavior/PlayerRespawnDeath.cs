@@ -11,6 +11,9 @@ public class PlayerRespawnDeath : MonoBehaviour
     public Animator animator;
     Rigidbody2D playerRb;
     SpriteRenderer spriteRenderer;
+
+    [Header("Audio Effect settings")]
+    public AudioSource death;
     private void Update()
     {
         Vector2 screenPos = Camera.main.WorldToScreenPoint(respawnPoint);
@@ -48,6 +51,7 @@ public class PlayerRespawnDeath : MonoBehaviour
 
     public void Kill()
     {
+        death.Play();
         animator.SetBool("is_alive", false);
         deathPS.transform.position = transform.position;
         deathPS.Emit(20);

@@ -8,9 +8,9 @@ public class CamZoom : MonoBehaviour
     private FlowerAnimation flowerAnimation;
 
     [Header("Zoom settings")]
-    private float zoomInDistance = 1f;
+    private float zoomInDistance = 5f;
     private float zoomOutDistance = 1f;
-    private float zoomFactor = 1.5f;
+    private float zoomFactor = 1.75f;
     private float zoomDuration = 0.5f;
 
     private bool isZoomed = false;
@@ -32,13 +32,13 @@ public class CamZoom : MonoBehaviour
         // Approche -> zoom
         if (flowerAnimation.newFlower && distance <= zoomInDistance && !isZoomed)
         {
-            cameraFollow.TweenZoom(zoomFactor, zoomDuration);
+            cameraFollow.TweenZoom(zoomFactor, zoomDuration * 2);
             isZoomed = true;
         }
         // Éloignement -> dezoom
         else if (!flowerAnimation.newFlower || distance >= zoomOutDistance && isZoomed)
         {
-            cameraFollow.TweenZoom(0.8f, zoomDuration * 3);
+            cameraFollow.TweenZoom(0.8f, zoomDuration * 5);
             isZoomed = false;
         }
     }

@@ -13,6 +13,10 @@ public class PlayerController : MonoBehaviour
     private int standing = 0;
     private bool firstCollide = true;
 
+    [Header("Audio Effect settings")]
+    public AudioSource walking;
+    public AudioSource flying;
+
     private Rigidbody2D rb;
 
     void Awake()
@@ -25,11 +29,22 @@ public class PlayerController : MonoBehaviour
         float horizontal = Input.GetAxisRaw("Horizontal"); // -1,0,1 plus propre que KeyCheck
         rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
 
+        if (!animator.GetBool("is_alive"))
+        {
+            walking.Stop();
+            flying.Stop();
+        }
+
         // Animation set
         if (horizontal < 0)
         {
             if (animator.GetBool("is_alive")) transform.rotation = Quaternion.Euler(0, 0, -7f);
             standing = 0;
+            if (!animator.GetBool("is_flying"))
+            {
+                if (!walking.isPlaying) walking.Play();
+                flying.Stop();
+            }
             animator.SetBool("is_walking", true);
             animator.SetBool("is_standing", false);
             animator.SetBool("is_right", false);
@@ -39,6 +54,11 @@ public class PlayerController : MonoBehaviour
         {
             if (animator.GetBool("is_alive")) transform.rotation = Quaternion.Euler(0, 0, 7f);
             standing = 0;
+            if (!animator.GetBool("is_flying"))
+            {
+                if (!walking.isPlaying) walking.Play();
+                flying.Stop();
+            }
             animator.SetBool("is_walking", true);
             animator.SetBool("is_standing", false);
             animator.SetBool("is_right", true);
@@ -49,6 +69,11 @@ public class PlayerController : MonoBehaviour
             standing++;
             if (standing > 15)
             {
+                if (!animator.GetBool("is_flying"))
+                {
+                    walking.Stop();
+                    flying.Stop();
+                }
                 animator.SetBool("is_walking", false);
                 animator.SetBool("is_standing", true);
             }
@@ -57,6 +82,8 @@ public class PlayerController : MonoBehaviour
         // Jump
         if (Input.GetButtonDown("Jump") && isGrounded == 0)
         {
+            walking.Stop();
+            if (!flying.isPlaying) flying.Play();
             animator.SetBool("is_flying", true);
             Jump();
         }
@@ -87,6 +114,8 @@ public class PlayerController : MonoBehaviour
             if (!firstCollide)
                 isGrounded--;
             firstCollide = false;
+            walking.Stop();
+            flying.Stop();
             animator.SetBool("is_flying", false);
         }
     }

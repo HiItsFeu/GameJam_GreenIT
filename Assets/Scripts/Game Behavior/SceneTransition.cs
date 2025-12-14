@@ -18,6 +18,12 @@ public class SceneTransition : MonoBehaviour
 
     IEnumerator ChangeSceneRoutine()
     {
+        // sound
+        GameObject backgroundObject = GameObject.Find("Audio Source");
+        AudioManager audioManager = backgroundObject.GetComponent<AudioManager>();
+        audioManager.fadeDuration = duration;
+        audioManager.FadeOut();
+
         yield return StartCoroutine(AnimateTransition(true, duration));
         SceneManager.LoadScene(levelName);
         yield return null;

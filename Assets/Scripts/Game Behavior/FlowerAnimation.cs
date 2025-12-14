@@ -7,8 +7,8 @@ public class FlowerAnimation : MonoBehaviour
     public Vector2 center = new Vector2(0.5f, 0.5f);
     public ParticleSystem flowerPS;
     private Material grayScaleMaterial;
-
     private Coroutine currentTween;
+
     private void Start()
     {
         GameObject backgroundObject = GameObject.Find("background");
@@ -25,6 +25,11 @@ public class FlowerAnimation : MonoBehaviour
         flowerPS.transform.position = transform.position;
         flowerPS.Emit(20);
         currentTween = StartCoroutine(AnimateGrayScale(5f));
+
+        // sound
+        GameObject backgroundObject = GameObject.Find("Audio Source");
+        AudioManager audioManager = backgroundObject.GetComponent<AudioManager>();
+        audioManager.PlayTheme(audioManager.s2.clip);
     }
     private IEnumerator AnimateGrayScale(float duration)
     {
