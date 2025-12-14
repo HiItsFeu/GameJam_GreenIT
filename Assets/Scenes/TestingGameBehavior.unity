@@ -536,6 +536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newFlower: 1
+  center: {x: 0.4, y: 0.4}
   flowerPS: {fileID: 1072186980}
 --- !u!1 &468616527
 GameObject:
@@ -1278,7 +1279,6 @@ GameObject:
   - component: {fileID: 1341492374}
   - component: {fileID: 1341492372}
   - component: {fileID: 1341492377}
-  - component: {fileID: 1341492379}
   m_Layer: 0
   m_Name: TestPlayer
   m_TagString: Untagged
@@ -1321,7 +1321,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: a921604f032fc4d459fc165a5a432967, type: 3}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1362,7 +1362,7 @@ Transform:
   m_GameObject: {fileID: 1341492363}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.062397458, w: 0.9980514}
-  m_LocalPosition: {x: -10.496, y: -2.64, z: 0}
+  m_LocalPosition: {x: -7.02, y: -2.37, z: 0}
   m_LocalScale: {x: 0.31573784, y: 0.31573784, z: 0.31573784}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1519,22 +1519,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.080254264, y: 0.1484306}
   m_Size: {x: 3.1977615, y: 1.9415137}
   m_Direction: 1
---- !u!114 &1341492379
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1341492363}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46195d1a8b509cf4baa6cd771cfeb7e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneTransition: {fileID: 1985629844}
-  transitionKey: 32
-  duration: 1.5
-  inverted: 0
 --- !u!1 &1388347136
 GameObject:
   m_ObjectHideFlags: 0
@@ -1546,7 +1530,7 @@ GameObject:
   - component: {fileID: 1388347138}
   - component: {fileID: 1388347139}
   m_Layer: 0
-  m_Name: level1_0
+  m_Name: background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1590,7 +1574,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: -876546973899608171, guid: a921604f032fc4d459fc165a5a432967, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1610,7 +1594,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: -5830527214089153635, guid: 23a3f7298ca4dae42a78cc8dfee66094, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2146,7 +2130,7 @@ Transform:
   m_GameObject: {fileID: 1966328937}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.29, y: 0, z: -10}
+  m_LocalPosition: {x: 1.37, y: 0.09, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

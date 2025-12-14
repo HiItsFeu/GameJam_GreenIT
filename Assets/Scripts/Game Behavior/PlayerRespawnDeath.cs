@@ -30,7 +30,6 @@ public class PlayerRespawnDeath : MonoBehaviour
 
     IEnumerator Respawn(int duration)
     {
-        animator.SetBool("is_alive", false);
         playerRb.simulated = false;
         infoText.enabled = true;
         //spriteRenderer.enabled = false;
@@ -39,7 +38,7 @@ public class PlayerRespawnDeath : MonoBehaviour
             infoText.text = string.Format("Respawn in {0}s", duration - i);
             yield return new WaitForSeconds(1);
         }
-        
+
         animator.SetBool("is_alive", true);
         transform.position = respawnPoint;
         infoText.enabled = false;
@@ -49,6 +48,7 @@ public class PlayerRespawnDeath : MonoBehaviour
 
     public void Kill()
     {
+        animator.SetBool("is_alive", false);
         deathPS.transform.position = transform.position;
         deathPS.Emit(20);
         StartCoroutine(Respawn(3));
