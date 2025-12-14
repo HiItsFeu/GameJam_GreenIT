@@ -36,7 +36,7 @@ public class FlowerAnimation : MonoBehaviour
         newFlower = false;
         success.Play();
         flowerPS.transform.position = transform.position;
-        flowerPS.Emit(20);
+        flowerPS.Emit(50);
         currentTween = StartCoroutine(AnimateGrayScale(5f));
 
         // sound
