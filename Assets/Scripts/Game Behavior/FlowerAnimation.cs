@@ -29,7 +29,6 @@ public class FlowerAnimation : MonoBehaviour
         }
     }
 
-
     public void Launch()
     {
         if (!newFlower) return;
