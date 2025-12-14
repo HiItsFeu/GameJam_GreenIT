@@ -1,26 +1,30 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SceneTransition : MonoBehaviour
 {
     [SerializeField] private Material transitionMaterial;
+    public string levelName;
+    public float duration;
+    private bool isNew = true;
 
-    private Coroutine currentTween;
-
-    public void ChangeScene(bool inverted, float duration)
+    public void ChangeScene()
     {
-        if (currentTween != null)
-            StopCoroutine(currentTween);
-
-        float feather = transitionMaterial.GetFloat("_Feather");
-        transitionMaterial.SetFloat("_Progress", inverted ? 0f - feather : 1f + feather);
-        currentTween = StartCoroutine(AnimateTransition(inverted, duration));
+        if (!isNew) return;
+        isNew = false;
+        StartCoroutine(ChangeSceneRoutine());
     }
+
+    IEnumerator ChangeSceneRoutine()
+    {
+        yield return StartCoroutine(AnimateTransition(true, duration));
+        SceneManager.LoadScene(levelName);
+        yield return null;
+    }
+
     public void BlackScene()
     {
-        if (currentTween != null)
-            StopCoroutine(currentTween);
-
         float feather = transitionMaterial.GetFloat("_Feather");
         transitionMaterial.SetFloat("_Progress", 1f + feather);
     }
@@ -28,9 +32,11 @@ public class SceneTransition : MonoBehaviour
     private IEnumerator AnimateTransition(bool inverted, float duration)
     {
         float elapsed = 0f;
-        float startProgress = transitionMaterial.GetFloat("_Progress");
-        float targetProgress = inverted ? 1f : 0f;
+        float feather = transitionMaterial.GetFloat("_Feather");
+        float startProgress = inverted ? 0f - feather : 1f + feather;
+        float targetProgress = inverted ? 1f + feather : 0f - feather;
 
+        transitionMaterial.SetFloat("_Progress", startProgress);
         transitionMaterial.SetFloat("_Invert", inverted ? 1f : 0f);
 
         while (elapsed < duration)
@@ -47,6 +53,10 @@ public class SceneTransition : MonoBehaviour
         }
 
         transitionMaterial.SetFloat("_Progress", targetProgress);
-        currentTween = null;
+    }
+    private void Start()
+    {
+        BlackScene();
+        StartCoroutine(AnimateTransition(false, duration));
     }
 }

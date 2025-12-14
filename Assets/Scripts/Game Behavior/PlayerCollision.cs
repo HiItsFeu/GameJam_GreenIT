@@ -16,6 +16,10 @@ public class PlayerCollision : MonoBehaviour
         {
             playerRespawnDeath.Kill();
         }
+        else if (collision.gameObject.CompareTag("NextLevel"))
+        {
+            collision.gameObject.GetComponent<SceneTransition>().ChangeScene();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
