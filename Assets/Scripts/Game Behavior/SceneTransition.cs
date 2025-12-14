@@ -7,7 +7,11 @@ public class SceneTransition : MonoBehaviour
     [SerializeField] private Material transitionMaterial;
     public string levelName;
     public float duration;
+    [Header("Timer")]
+    public bool delayActivated = false;
+    public float delay = 0f;
     private bool isNew = true;
+
 
     public void ChangeScene()
     {
@@ -24,6 +28,7 @@ public class SceneTransition : MonoBehaviour
         audioManager.fadeDuration = duration;
         audioManager.FadeOut();
 
+        if (delayActivated) yield return new WaitForSeconds(delay);
         yield return StartCoroutine(AnimateTransition(true, duration));
         SceneManager.LoadScene(levelName);
         yield return null;
