@@ -1279,6 +1279,7 @@ GameObject:
   - component: {fileID: 1341492374}
   - component: {fileID: 1341492372}
   - component: {fileID: 1341492377}
+  - component: {fileID: 1341492379}
   m_Layer: 0
   m_Name: TestPlayer
   m_TagString: Untagged
@@ -1519,6 +1520,20 @@ CapsuleCollider2D:
   m_Offset: {x: -0.080254264, y: 0.1484306}
   m_Size: {x: 3.1977615, y: 1.9415137}
   m_Direction: 1
+--- !u!114 &1341492379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341492363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca97715c977ebd94ea3a59526a929e67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flowerCollider: {fileID: 295009579}
+  cameraFollow: {fileID: 1966328942}
 --- !u!1 &1388347136
 GameObject:
   m_ObjectHideFlags: 0
@@ -2011,6 +2026,7 @@ GameObject:
   - component: {fileID: 1966328940}
   - component: {fileID: 1966328939}
   - component: {fileID: 1966328938}
+  - component: {fileID: 1966328942}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2136,6 +2152,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1966328942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966328937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 506761b2e7e5d4145aeb93cdb551441c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1966328941}
+  minBounds: {x: -8, y: -5}
+  maxBounds: {x: 14, y: 10}
 --- !u!1 &1985629843
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,6 +5,7 @@ public class CamZoom : MonoBehaviour
     [Header("Refs")]
     public Collider2D flowerCollider;
     public CameraFollow cameraFollow;
+    private FlowerAnimation flowerAnimation;
 
     [Header("Zoom settings")]
     private float zoomInDistance = 1f;
@@ -13,6 +14,10 @@ public class CamZoom : MonoBehaviour
     private float zoomDuration = 0.5f;
 
     private bool isZoomed = false;
+    private void Start()
+    {
+        flowerAnimation = flowerCollider.GetComponent<FlowerAnimation>();
+    }
 
     void Update()
     {
@@ -25,17 +30,17 @@ public class CamZoom : MonoBehaviour
         float distance = Vector2.Distance(transform.position, closestPoint);
 
         // Approche -> zoom
-        if (distance <= zoomInDistance && !isZoomed)
+        if (flowerAnimation.newFlower && distance <= zoomInDistance && !isZoomed)
         {
             Debug.Log("ZOOM IN");
             cameraFollow.TweenZoom(zoomFactor, zoomDuration);
             isZoomed = true;
         }
         // Éloignement -> dezoom
-        else if (distance >= zoomOutDistance && isZoomed)
+        else if (!flowerAnimation.newFlower || distance >= zoomOutDistance && isZoomed)
         {
             Debug.Log("ZOOM OUT");
-            cameraFollow.TweenZoom(1f, zoomDuration);
+            cameraFollow.TweenZoom(0.8f, zoomDuration * 3);
             isZoomed = false;
         }
     }
