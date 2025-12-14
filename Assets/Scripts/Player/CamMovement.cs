@@ -41,11 +41,11 @@ public class CameraFollow : MonoBehaviour
         Vector3 desiredPosition = new Vector3(clampedX, clampedY, zOffset);
         transform.position = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed * Time.deltaTime);
 
-        // test for zoom cam
+        //test for zoom cam
         //if (Input.GetKeyDown(KeyCode.C))
-        //{
-        //    TweenZoom(1.5f, 0.5f);
-        //}
+        //    {
+        //        TweenZoom(1.5f, 0.5f);
+        //    }
     }
 
     public void TweenZoom(float zoomValue, float duration)
