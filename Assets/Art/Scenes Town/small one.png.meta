@@ -1,13 +1,22 @@
 fileFormatVersion: 2
-guid: f9f2ac0b669f407468d0c324a8f80d5e
+guid: 24df88308dab14d4c873e365ddb56f4c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4618140422616490331
-    second: town_0
+      213: -5623622790282169019
+    second: small one_0
   - first:
-      213: -1673532320919651668
-    second: town_1
+      213: -2033992007096290752
+    second: small one_1
+  - first:
+      213: -4893898623034071537
+    second: small one_2
+  - first:
+      213: 8978661620238995112
+    second: small one_3
+  - first:
+      213: -3879605122269462604
+    second: small one_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,7 +112,29 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: town_0
+      name: small one_0
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 894
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 545b0721ed0e4f1b0800000000000000
+      internalID: -5623622790282169019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: small one_1
       rect:
         serializedVersion: 2
         x: 0
@@ -118,20 +149,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5ae521be0c119efb0800000000000000
-      internalID: -4618140422616490331
+      spriteID: 042ba0dcb0fc5c3e0800000000000000
+      internalID: -2033992007096290752
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: town_1
+      name: small one_2
       rect:
         serializedVersion: 2
-        x: 49
-        y: 0
-        width: 1871
-        height: 900
+        x: 143
+        y: 201
+        width: 353
+        height: 331
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +171,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: caaf27b883b66c8e0800000000000000
-      internalID: -1673532320919651668
+      spriteID: f06e74f9121651cb0800000000000000
+      internalID: -4893898623034071537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: small one_3
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 0
+        width: 684
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ae47c03c2d9a9c70800000000000000
+      internalID: 8978661620238995112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: small one_4
+      rect:
+        serializedVersion: 2
+        x: 1718
+        y: 216
+        width: 202
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bfb75242bfd82ac0800000000000000
+      internalID: -3879605122269462604
       vertices: []
       indices: 
       edges: []
@@ -160,8 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      town_0: -4618140422616490331
-      town_1: -1673532320919651668
+      small one_0: -5623622790282169019
+      small one_1: -2033992007096290752
+      small one_2: -4893898623034071537
+      small one_3: 8978661620238995112
+      small one_4: -3879605122269462604
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
