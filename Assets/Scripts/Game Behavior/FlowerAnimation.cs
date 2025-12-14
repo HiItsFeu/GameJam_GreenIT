@@ -9,6 +9,9 @@ public class FlowerAnimation : MonoBehaviour
     private Material grayScaleMaterial;
     private Coroutine currentTween;
 
+    [Header("Audio Effect settings")]
+    public AudioSource success;
+
     private void Start()
     {
         GameObject backgroundObject = GameObject.Find("background");
@@ -22,6 +25,7 @@ public class FlowerAnimation : MonoBehaviour
     {
         if (!newFlower) return;
         newFlower = false;
+        success.Play();
         flowerPS.transform.position = transform.position;
         flowerPS.Emit(20);
         currentTween = StartCoroutine(AnimateGrayScale(5f));
