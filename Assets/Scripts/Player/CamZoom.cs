@@ -38,7 +38,7 @@ public class CamZoom : MonoBehaviour
         // Éloignement -> dezoom
         else if (!flowerAnimation.newFlower || distance >= zoomOutDistance && isZoomed)
         {
-            cameraFollow.TweenZoom(0.8f, zoomDuration * 5);
+            cameraFollow.TweenZoom(1f, zoomDuration * 5);
             isZoomed = false;
         }
     }
