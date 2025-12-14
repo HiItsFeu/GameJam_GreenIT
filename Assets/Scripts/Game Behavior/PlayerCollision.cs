@@ -16,10 +16,6 @@ public class PlayerCollision : MonoBehaviour
         {
             playerRespawnDeath.Kill();
         }
-        else if (collision.gameObject.CompareTag("NextLevel"))
-        {
-            collision.gameObject.GetComponent<SceneTransition>().ChangeScene();
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -29,6 +25,10 @@ public class PlayerCollision : MonoBehaviour
             FlowerAnimation targetScript = collision.gameObject.GetComponent<FlowerAnimation>();
             targetScript.Launch();
             playerRespawnDeath.respawnPoint = collision.gameObject.transform.position;
+        }
+        else if (collision.gameObject.CompareTag("NextLevel"))
+        {
+            collision.gameObject.GetComponent<SceneTransition>().ChangeScene();
         }
     }
 }
