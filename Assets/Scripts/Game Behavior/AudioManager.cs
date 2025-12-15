@@ -1,10 +1,12 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
 
+    public AudioSource parent;
     [Header("Themes")]
     public AudioSource s1;
     public AudioSource s2;
@@ -87,5 +89,6 @@ public class AudioManager : MonoBehaviour
         }
 
         current.Stop();
+        Destroy(gameObject);
     }
 }

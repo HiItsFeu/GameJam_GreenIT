@@ -7,11 +7,11 @@ public class SceneTransition : MonoBehaviour
     [SerializeField] private Material transitionMaterial;
     public string levelName;
     public float duration;
+    public AudioManager audioManager;
     [Header("Timer")]
     public bool delayActivated = false;
     public float delay = 0f;
     private bool isNew = true;
-
 
     public void ChangeScene()
     {
@@ -23,8 +23,6 @@ public class SceneTransition : MonoBehaviour
     IEnumerator ChangeSceneRoutine()
     {
         // sound
-        GameObject backgroundObject = GameObject.Find("Audio Source");
-        AudioManager audioManager = backgroundObject.GetComponent<AudioManager>();
         audioManager.fadeDuration = duration;
         audioManager.FadeOut();
 

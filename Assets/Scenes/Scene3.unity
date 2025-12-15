@@ -150,6 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1599efbee4fd1c439352ff269d09291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parent: {fileID: 775329250}
   s1: {fileID: 775329249}
   s2: {fileID: 775329250}
   playOnStart: 1
@@ -619,6 +620,7 @@ MonoBehaviour:
   transitionMaterial: {fileID: -876546973899608171, guid: 4fb0e4e4891c1be4f9f3dd72bae0752c, type: 3}
   levelName: Scene3
   duration: 2
+  audioManager: {fileID: 775329248}
   delayActivated: 0
   delay: 0
 --- !u!4 &1630566169
